@@ -1,0 +1,173 @@
+﻿<Window x:Class="GTSpecDB.Editor.Setting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GTSpecDB.Editor"
+        mc:Ignorable="d"
+        Title="{DynamicResource mi_Setting_Title_str}" Height="420" Width="464" Closed="Window_Closed" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="複数コピー時に無視するID (GT5)" Margin="0,0,1,0" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="14"/>
+        <Label Content="_CAR_CUSTOM_INFO, CAR_NAME系, GENERIC_CAR, VARIATION, WHEEL..." HorizontalAlignment="Left" Margin="4,30,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_1" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="400,34,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_AIR_CLEANER..." HorizontalAlignment="Left" Margin="4,54,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_2" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="96,58,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+        <TextBox.InputBindings>
+            <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+        </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_BRAKE..." HorizontalAlignment="Left" Margin="150,54,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_3" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="204,58,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_CATALYST..." HorizontalAlignment="Left" Margin="258,54,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_4" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="330,58,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_CHASSIS..." HorizontalAlignment="Left" Margin="4,78,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_5" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="70,82,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_CLUTCH..." HorizontalAlignment="Left" Margin="124,78,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_6" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="188,82,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_COMPUTER..." HorizontalAlignment="Left" Margin="242,78,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_7" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="324,82,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_DRIVETRAIN..." HorizontalAlignment="Left" Margin="4,102,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_8" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="90,106,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_ENGINE..." HorizontalAlignment="Left" Margin="144,102,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_9" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="206,106,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_EXHAUST_MANIFOLD..." HorizontalAlignment="Left" Margin="260,102,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_10" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="394,106,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_FLYWHEEL..." HorizontalAlignment="Left" Margin="4,126,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_11" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="80,130,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_FRONTTIRE..." HorizontalAlignment="Left" Margin="134,126,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_12" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="214,130,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_GEAR..." HorizontalAlignment="Left" Margin="264,126,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_13" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="314,130,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_INTAKE_MANIFOLD..." HorizontalAlignment="Left" Margin="4,150,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_14" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="128,154,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_LIGHTWEIGHT..." HorizontalAlignment="Left" Margin="182,150,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_15" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="276,154,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_LSD..." HorizontalAlignment="Left" Margin="330,150,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_16" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="372,154,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_MUFFLER..." HorizontalAlignment="Left" Margin="4,174,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_17" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="74,178,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_NATUNE..." HorizontalAlignment="Left" Margin="128,174,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_18" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="194,178,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_PROPELLERSHAFT..." HorizontalAlignment="Left" Margin="248,174,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_19" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="362,178,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_RACINGMODIFY..." HorizontalAlignment="Left" Margin="4,198,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_20" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="110,202,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_REARTIRE..." HorizontalAlignment="Left" Margin="164,198,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_21" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="234,202,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_STEER..." HorizontalAlignment="Left" Margin="288,198,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_22" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="340,202,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_SUPERCHARGER..." HorizontalAlignment="Left" Margin="4,222,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_23" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="110,226,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_SUSPENSION..." HorizontalAlignment="Left" Margin="164,222,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_24" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="254,226,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_TURBINEKIT..." HorizontalAlignment="Left" Margin="308,222,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_25" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="390,226,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="_DEFAULT_PARTS..." HorizontalAlignment="Left" Margin="4,246,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Multi_Copy_ID_26" PreviewTextInput="Multi_Copy_ID_PreviewTextInput" CommandManager.PreviewExecuted="Multi_Copy_ID_PreviewExecuted" KeyDown="AssociatedObject_PreviewKeyDown" HorizontalAlignment="Left" Margin="110,250,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="40">
+            <TextBox.InputBindings>
+                <KeyBinding Gesture="Space" Command="ApplicationCommands.NotACommand"/>
+            </TextBox.InputBindings>
+        </TextBox>
+        <Label Content="{DynamicResource mi_Setting_M1_str}" HorizontalAlignment="Center" Margin="0,280,1,0" VerticalAlignment="Top" FontSize="13"/>
+        <Label Content="{DynamicResource mi_Setting_M2_str}" HorizontalAlignment="Center" Margin="0,300,1,0" VerticalAlignment="Top" FontSize="13"/>
+        <Label Content="{DynamicResource mi_Setting_M3_str}" HorizontalAlignment="Center" Margin="0,320,1,0" VerticalAlignment="Top" FontSize="13"/>
+        <Label Content="{DynamicResource mi_Setting_M4_str}" HorizontalAlignment="Center" Margin="0,340,1,0" VerticalAlignment="Top" FontSize="13"/>
+
+    </Grid>
+</Window>

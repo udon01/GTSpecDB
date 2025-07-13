@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Backup" xml:space="preserve">
+    <value>\BACKUP</value>
+  </data>
+  <data name="CopyCell_statusName1" xml:space="preserve">
+    <value>Copied cell '</value>
+  </data>
+  <data name="CopyCell_statusName2" xml:space="preserve">
+    <value>'</value>
+  </data>
+  <data name="Loading_Table_statusName1" xml:space="preserve">
+    <value>Loading </value>
+  </data>
+  <data name="Loading_Table_statusName2" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="DeleteRow_statusName" xml:space="preserve">
+    <value>Row deleted.</value>
+  </data>
+  <data name="ExportCurrentTableCSV_dlg" xml:space="preserve">
+    <value>Select file to export the table as CSV</value>
+  </data>
+  <data name="ExportCurrentTable_dlg" xml:space="preserve">
+    <value>Select file to export the table as TXT</value>
+  </data>
+  <data name="ID_Duplicate_M" xml:space="preserve">
+    <value>This ID is already being used by another row. Make sure you know what you are doing. Continue?</value>
+  </data>
+  <data name="ID_Duplicate_T" xml:space="preserve">
+    <value>ID in use</value>
+  </data>
+  <data name="ID_or_Label_Duplicate_M" xml:space="preserve">
+    <value>The pasted row has an ID or Label that is already being used by another row. Make sure you know what you are doing. Continue?</value>
+  </data>
+  <data name="ID_or_Label_Duplicate_T" xml:space="preserve">
+    <value>ID/Label in use</value>
+  </data>
+  <data name="Label_chara_error_M" xml:space="preserve">
+    <value>The label must contain only letters, numbers, or underscores.</value>
+  </data>
+  <data name="Label_chara_error_T" xml:space="preserve">
+    <value>Validation Error</value>
+  </data>
+  <data name="Label_Duplicate_M" xml:space="preserve">
+    <value>This Label is already being used by another row. Make sure you know what you are doing. Continue?</value>
+  </data>
+  <data name="Label_Duplicate_T" xml:space="preserve">
+    <value>Label in use</value>
+  </data>
+  <data name="Load_Failed_specDB_M" xml:space="preserve">
+    <value>Could not load SpecDB: </value>
+  </data>
+  <data name="Load_Failed_specDB_T" xml:space="preserve">
+    <value>Failed to load the SpecDB</value>
+  </data>
+  <data name="Open_SpecDB" xml:space="preserve">
+    <value>Open SpecDB</value>
+  </data>
+  <data name="Out_of_range_byte_M1" xml:space="preserve">
+    <value>Could not parse 'Unsigned Byte' type. It must be a number between </value>
+  </data>
+  <data name="Out_of_range_float_M1" xml:space="preserve">
+    <value>Could not parse 'Float' type. It must be a number between </value>
+  </data>
+  <data name="Out_of_range_int_M1" xml:space="preserve">
+    <value>Could not parse 'Integer' type. It must be number between </value>
+  </data>
+  <data name="Out_of_range_long_M1" xml:space="preserve">
+    <value>Could not parse 'Long' type. It must be a number between </value>
+  </data>
+  <data name="Out_of_range_M2" xml:space="preserve">
+    <value> and </value>
+  </data>
+  <data name="Out_of_range_M3" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="Out_of_range_sbyte_M1" xml:space="preserve">
+    <value>Could not parse 'Signed Byte' type. It must be a number between </value>
+  </data>
+  <data name="Out_of_range_short_M1" xml:space="preserve">
+    <value>Could not parse 'Short' type. It must be number between </value>
+  </data>
+  <data name="Out_of_range_T" xml:space="preserve">
+    <value>Validation Error</value>
+  </data>
+  <data name="Out_of_range_uint_M1" xml:space="preserve">
+    <value>Could not parse 'Unsigned Integer' type. It must be number between </value>
+  </data>
+  <data name="Out_of_range_ushort_M1" xml:space="preserve">
+    <value>Could not parse 'UShort' type. It must be number between </value>
+  </data>
+  <data name="SaveCarsParts_dlg" xml:space="preserve">
+    <value>Select folder to save the CARS folder</value>
+  </data>
+  <data name="SaveCarsParts_PW_Title" xml:space="preserve">
+    <value>Saving Parts Info</value>
+  </data>
+  <data name="SaveCarsParts_statusName1" xml:space="preserve">
+    <value>Car parts saved to </value>
+  </data>
+  <data name="SaveCarsParts_statusName2" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="SaveCurrentTable_dlg" xml:space="preserve">
+    <value>Select folder to save the table</value>
+  </data>
+  <data name="SaveCurrentTable_statusName1" xml:space="preserve">
+    <value>Table saved to </value>
+  </data>
+  <data name="SaveCurrentTable_statusName2" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="SavePartsInfo_dlg" xml:space="preserve">
+    <value>Select folder to save PartsInfo.tbd/tbi</value>
+  </data>
+  <data name="SavePartsInfo_PW_Title" xml:space="preserve">
+    <value>Saving Parts Info</value>
+  </data>
+  <data name="SavePartsInfo_statusName1" xml:space="preserve">
+    <value>PartsInfo.tbi/tbd saved to </value>
+  </data>
+  <data name="SavePartsInfo_statusName2" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="Save_Failed_Backup_M" xml:space="preserve">
+    <value>Failed to save backup. Unable to write file.</value>
+  </data>
+  <data name="Save_Failed_Backup_T" xml:space="preserve">
+    <value>Failed to save</value>
+  </data>
+  <data name="Save_Failed_CarsParts_M" xml:space="preserve">
+    <value>Can not save the CARS folder as GENERIC_CAR is missing.</value>
+  </data>
+  <data name="Save_Failed_CarsParts_T" xml:space="preserve">
+    <value>Table not loaded</value>
+  </data>
+  <data name="Save_Failed_PartsInfo_M" xml:space="preserve">
+    <value>Can not save PartsInfo as GENERIC_CAR is missing.</value>
+  </data>
+  <data name="Save_Failed_PartsInfo_T" xml:space="preserve">
+    <value>Table not loaded</value>
+  </data>
+  <data name="IsTableProperlyMapped_M" xml:space="preserve">
+    <value>This table is not entirely mapped - display errors &amp; missing data may be present.</value>
+  </data>
+  <data name="IsTableProperlyMapped_T" xml:space="preserve">
+    <value>Table not mapped correctly</value>
+  </data>
+  <data name="Load_Failed_Table_M" xml:space="preserve">
+    <value>Could not load table: </value>
+  </data>
+  <data name="Load_Failed_Table_T" xml:space="preserve">
+    <value>Table not loaded</value>
+  </data>
+  <data name="cm_TableIndex_Header" xml:space="preserve">
+    <value>Table Index: </value>
+  </data>
+  <data name="PopulateTableColumns_Type" xml:space="preserve">
+    <value>Type: </value>
+  </data>
+  <data name="SetNoProgress_statusName" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="String_already_exists_M" xml:space="preserve">
+    <value>This string already exists in the string database. If you wish to select it search and select it.</value>
+  </data>
+  <data name="String_already_exists_T" xml:space="preserve">
+    <value>String already exists</value>
+  </data>
+</root>

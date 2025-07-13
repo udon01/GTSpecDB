@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ProgressWindow" Height="145.738" Width="340" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Processing:" HorizontalContentAlignment="Center" Margin="10,10,10,0" Height="28" VerticalAlignment="Top"/>
+        <Label Content="進行度:" HorizontalContentAlignment="Center" Margin="10,10,10,0" Height="28" VerticalAlignment="Top"/>
         <Label Name="currentElement" Content="..." HorizontalContentAlignment="Center" Margin="10,0,10,44" Height="28" VerticalAlignment="Bottom"/>
         
         <ProgressBar Name="progressBar" Margin="10,0,10,10" Height="29" VerticalAlignment="Bottom"/>

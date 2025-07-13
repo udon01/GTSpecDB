@@ -5,48 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GTSpecDB.Editor"
         mc:Ignorable="d"
-        Title="Gran Turismo Spec Database Editor" Height="640" Width="960" AllowDrop="True" Drop="Window_Drop" WindowStartupLocation="CenterScreen">
+        Title="Gran Turismo Spec Database Editor" Height="640" Width="960" AllowDrop="True" Drop="Window_Drop" WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
     <Grid>
-        <DockPanel LastChildFill="True">
+        <DockPanel LastChildFill="True" Grid.ColumnSpan="3">
             <Menu DockPanel.Dock="Top" >
-                <MenuItem Header="_File">
-                    <MenuItem Header="Open SpecDB Folder" Click="OpenSpecDB_MenuItem_Click"/>
+                <MenuItem Header="{DynamicResource mi_File_str}">
+                    <MenuItem Header="{DynamicResource mi_OpenSpecDB_str}" Click="OpenSpecDB_MenuItem_Click"/>
                     <Separator/>
-                    <MenuItem Name="mi_SaveTable" IsEnabled="False" Header="Rebuild Current Table" Click="SaveCurrentTable_Click"/>
-                    <MenuItem Name="mi_SavePartsInfo" IsEnabled="False" Header="Save PartsInfo.tbi/tbd (GT5, requires all tables)" Click="SavePartsInfo_Click"/>
-                    <MenuItem Name="mi_SaveCarsParts" IsEnabled="False" Header="Save Parts Information (CARS folder for GT4, requires all tables)" Click="SaveCarsParts_Click"/>
+                    <MenuItem Name="mi_cm_CopyLabels" IsEnabled="False" Header="{DynamicResource mi_dg_cm_CopyLabels_str}" Click="dg_cm_CopyLabels_Click"/>
+                    <MenuItem Name="mi_SaveTable" IsEnabled="False" Header="{DynamicResource mi_SaveTable_str}" Click="SaveCurrentTable_Click"/>
+                    <MenuItem Name="mi_SavePartsInfo" IsEnabled="False" Header="{DynamicResource mi_SavePartsInfo_str}" Click="SavePartsInfo_Click"/>
+                    <MenuItem Name="mi_SaveCarsParts" IsEnabled="False" Header="{DynamicResource mi_SaveCarsParts_str}" Click="SaveCarsParts_Click"/>
                     <Separator/>
-                    <MenuItem Name="mi_ExportTable" IsEnabled="False" Header="Export Current Table (.txt)" Click="ExportCurrentTable_Click"/>
-                    <MenuItem Name="mi_ExportTableCSV" IsEnabled="False" Header="Export Current Table (.csv)" Click="ExportCurrentTableCSV_Click"/>
-                    <MenuItem Name="mi_ExportTableSQLite" IsEnabled="False" Header="Export SpecDB as SQLite" Click="ExportCurrentTableSQLite_Click"/>
+                    <MenuItem Name="mi_ExportTable" IsEnabled="False" Header="{DynamicResource mi_ExportTable_str}" Click="ExportCurrentTable_Click"/>
+                    <MenuItem Name="mi_ExportTableCSV" IsEnabled="False" Header="{DynamicResource mi_ExportTableCSV_str}" Click="ExportCurrentTableCSV_Click"/>
+                    <MenuItem Name="mi_ExportTableSQLite" IsEnabled="False" Header="{DynamicResource mi_ExportTableSQLite_str}" Click="ExportCurrentTableSQLite_Click"/>
                     <Separator/>
-                    <MenuItem Name="mi_Exit" Header="Exit" Click="mi_Exit_Click"/>
+                    <MenuItem Name="mi_Exit" Header="{DynamicResource mi_Exit_str}" Click="mi_Exit_Click"/>
                 </MenuItem>
+                <MenuItem Header="言語 / Language">
+                    <MenuItem Header="日本語" x:Name="MenuItem_Japanese" Click="Language_Japanese_Click" IsCheckable="True"/>
+                    <MenuItem Header="English" x:Name="MenuItem_English" Click="Language_English_Click" IsCheckable="True"/>
+                </MenuItem>
+                <MenuItem Header="{DynamicResource mi_Setting_str}" x:Name="mi_Setting" Click="Setting_Click"/>
+
             </Menu>
             <Separator DockPanel.Dock="Top" Width="Auto" Height="1"/>
             <ToolBarTray DockPanel.Dock="Top" IsLocked="True">
                 <ToolBar Loaded="ToolBar_Loaded">
-                    <Label Content="Loaded Tables" FontWeight="DemiBold" VerticalContentAlignment="Bottom" Width="154" Margin="0,0,0,0"/>
-                    <Button Name="btn_Save" IsEnabled="False" Click="btn_Save_Click" ToolTip="Save">
+                    <Label Content="{DynamicResource mi_LoadedTable_str}" FontWeight="DemiBold" VerticalContentAlignment="Bottom" Width="154" Margin="0,0,0,0"/>
+                    <Button Name="btn_Save" IsEnabled="False" Click="btn_Save_Click" ToolTip="{DynamicResource mi_btn_Save_str}">
                         <Image Source="Resources/appbar.save.png" Width="24" Height="24" IsEnabled="False"/>
                     </Button>
-                    <Button Name="btn_SaveAs" IsEnabled="False" Click="btn_SaveAs_Click"  ToolTip="Save As">
+                    <Button Name="btn_SaveAs" IsEnabled="False" Click="btn_SaveAs_Click"  ToolTip="{DynamicResource mi_btn_SaveAs_str}">
                         <Image Source="Resources/appbar.save.png" Width="24" Height="24"/>
                     </Button>
                     <Separator/>
-                    <Button Name="btn_AddRow" IsEnabled="False" Click="btn_AddRow_Click" ToolTip="Add Row">
+                    <Button Name="btn_AddRow" IsEnabled="False" Click="btn_AddRow_Click" ToolTip="{DynamicResource mi_btn_AddRow_str}">
                         <Image Source="Resources/appbar.list.add.below.png" Width="24" Height="24"/>
                     </Button>
-                    <Button Name="btn_DeleteRow" IsEnabled="False" Click="btn_DeleteRow_Click"  ToolTip="Delete Row">
+                    <Button Name="btn_DeleteRow" IsEnabled="False" Click="btn_DeleteRow_Click"  ToolTip="{DynamicResource mi_btn_DeleteRow_str}">
                         <Image Source="Resources/appbar.list.delete.png" Width="24" Height="24"/>
                     </Button>
                     <Separator/>
-                    <Button Name="btn_CopyRow" IsEnabled="False" Click="btn_CopyRow_Click" ToolTip="Copy Selected Row">
+                    <Button Name="btn_CopyRow" IsEnabled="False" Click="btn_CopyRow_Click" ToolTip="{DynamicResource mi_btn_CopyRow_str}">
                         <Image Source="Resources/appbar.page.copy.png" Width="24" Height="24"/>
                     </Button>
                     <Separator/>
                     <Image Source="Resources/appbar.magnify.png" Width="24" Height="24"/>
-                    <Label Height="28">Filter Columns by..</Label>
+                    <Label x:Name="ColumnFilter_str" Height="28" Content="{DynamicResource mi_ColumnFilter_str}"/>
                     <ComboBox Name="cb_FilterColumnType" IsEnabled="False" Width="120"/>
                     <TextBox Name="tb_ColumnFilter" BorderBrush="Black" TextChanged="tb_ColumnFilter_TextChanged" IsEnabled="False" HorizontalAlignment="Right" Width="200"/>
                     <Separator/>
@@ -88,8 +96,8 @@
                 <ListBox Name="lb_Tables" DockPanel.Dock="Left" Width="160" SelectionChanged="lb_Tables_Selected" ContextMenuOpening="lb_Tables_ContextMenuOpening">
                     <ListBox.ContextMenu>
                         <ContextMenu>
-                            <MenuItem Name="cm_DumpTable" Header="Dump Table Data" Click="cm_DumpTable_Click"/>
-                            <MenuItem Name="cm_DumpDebugTable" Header="Dump Table Information (Debug)" Click="cm_DumpDebugTable_Click"/>
+                            <MenuItem Name="cm_DumpTable" Header="{DynamicResource mi_cm_DumpTable_str}" Click="cm_DumpTable_Click"/>
+                            <MenuItem Name="cm_DumpDebugTable" Header="{DynamicResource mi_cm_DumpDebugTable_str}" Click="cm_DumpDebugTable_Click"/>
                             <MenuItem Name="cm_TableIndex" Header="N/A" IsEnabled="false"/>
                         </ContextMenu>
                     </ListBox.ContextMenu>
@@ -105,8 +113,9 @@
 
                     <DataGrid.ContextMenu>
                         <ContextMenu Name="dg_ContextMenu">
-                            <MenuItem Name="dg_cm_CopyCell" Header="Copy Cell" Click="dg_cm_CopyCell_Click"/>
-                            <MenuItem Name="dg_cm_ViewRaceEntries" Header="View RACE Entries (GT4)" Click="dg_cm_ViewRaceEntries_Click"/>
+                            <MenuItem Name="dg_cm_CopyCell" Header="{DynamicResource mi_dg_cm_CopyCell_str}" Click="dg_cm_CopyCell_Click"/>
+                            <MenuItem Name="dg_cm_CopyLabels" Header="{DynamicResource mi_dg_cm_CopyLabels_str}" Click="dg_cm_CopyLabels_Click"/>
+                            <MenuItem Name="dg_cm_ViewRaceEntries" Header="{DynamicResource mi_dg_cm_ViewRaceEntries_str}" Click="dg_cm_ViewRaceEntries_Click"/>
                         </ContextMenu>
                     </DataGrid.ContextMenu>
                 </DataGrid>

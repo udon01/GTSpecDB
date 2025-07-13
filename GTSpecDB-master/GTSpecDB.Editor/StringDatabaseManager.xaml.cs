@@ -31,6 +31,10 @@ namespace GTSpecDB.Editor
 
         public StringDatabaseManager(StringDatabase strDb, int currentIndex)
         {
+            var dictionary = new ResourceDictionary();
+            dictionary.Source = new Uri(@"Resources/StringResource." + Properties.Settings.Default.Language + @".xaml", UriKind.Relative);
+            this.Resources.MergedDictionaries.Add(dictionary);
+
             InitializeComponent();
             Database = strDb;
             lb_StringList.DataContext = strDb;
@@ -49,8 +53,7 @@ namespace GTSpecDB.Editor
         {
             if (Database.Strings.Contains(tb_NewString.Text))
             {
-                MessageBox.Show("This string already exists in the string database. If you wish to select it search and select it.", "String already exists", 
-                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(Resource.String_already_exists_M, Resource.String_already_exists_T, MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -156,8 +159,7 @@ namespace GTSpecDB.Editor
         {
             if (Database.Strings.Contains(str))
             {
-                MessageBox.Show("This string already exists in the string database. If you wish to select it search and select it.", "String already exists",
-                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(Resource.String_already_exists_M, Resource.String_already_exists_T, MessageBoxButton.OK, MessageBoxImage.Warning);
                 return false;
             }
 

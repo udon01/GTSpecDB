@@ -1,0 +1,21 @@
+﻿<Window x:Class="GTSpecDB.Editor.CopyLabels"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GTSpecDB.Editor"
+        mc:Ignorable="d"
+        Title="{DynamicResource mi_dg_cm_CopyLabels_Title_str}" Height="240" Width="400">
+    <Grid>
+        <Label Content="{DynamicResource mi_dg_cm_CopyLabels_M1_str}" HorizontalContentAlignment="Center" Margin="0,2,2,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <Label Content="{DynamicResource mi_dg_cm_CopyLabels_M2_str}" HorizontalContentAlignment="Center" Margin="0,22,2,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <Label Content="{DynamicResource mi_dg_cm_CopyLabels_M3_str}" HorizontalContentAlignment="Center" Margin="0,42,2,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <TextBox x:Name="Textbox_before_Label" HorizontalAlignment="Left" Margin="138,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="Textbox_after_Label" HorizontalAlignment="Left" Margin="138,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <Label Content="{DynamicResource mi_Label_before_copying_str}" HorizontalAlignment="Left" Margin="40,75,0,0" VerticalAlignment="Top" FontSize="11"/>
+        <Label Content="{DynamicResource mi_Label_after_copying_str}" HorizontalAlignment="Left" Margin="40,103,0,0" VerticalAlignment="Top" FontSize="11"/>
+        <Button x:Name="btn_Search_and_copy" Content="{DynamicResource mi_btn_Search_and_copy_str}" HorizontalAlignment="Left" Width="80" Height="22" Click="btn_Search_and_copy_Click" VerticalAlignment="Top" Margin="150,140,0,0"/>
+        <Label Content="{DynamicResource mi_dg_cm_CopyLabels_M4_str}" HorizontalContentAlignment="Center" Margin="0,168,2,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+    </Grid>
+</Window>

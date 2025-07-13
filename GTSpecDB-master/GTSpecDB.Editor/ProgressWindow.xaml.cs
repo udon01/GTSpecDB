@@ -21,6 +21,10 @@ namespace GTSpecDB.Editor
     {
         public ProgressWindow()
         {
+            var dictionary = new ResourceDictionary();
+            dictionary.Source = new Uri(@"Resources/StringResource." + Properties.Settings.Default.Language + @".xaml", UriKind.Relative);
+            this.Resources.MergedDictionaries.Add(dictionary);
+
             InitializeComponent();
         }
 
